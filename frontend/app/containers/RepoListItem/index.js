@@ -7,9 +7,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-
-import { makeSelectCurrentUser } from 'containers/App/selectors';
 import ListItem from 'components/ListItem';
 
 export function RepoListItem(props) {
@@ -21,8 +18,6 @@ export function RepoListItem(props) {
 
 RepoListItem.propTypes = {
   item: PropTypes.string,
-  currentUser: PropTypes.string,
 };
 
-export default connect(
-)(RepoListItem);
+export default connect()(RepoListItem);
