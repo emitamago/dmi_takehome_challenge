@@ -6,9 +6,13 @@ import ListItem from 'components/ListItem';
 import LoadingIndicator from 'components/LoadingIndicator';
 import RepoListItem from 'containers/RepoListItem';
 
-function ReposList({ loading, error, repos, strings}) {
+function ReposList({ loading, error, strings }) {
   if (loading) {
     return <List component={LoadingIndicator} />;
+  }
+
+  if (strings !== false) {
+    return <List items={strings} component={RepoListItem} />;
   }
 
   if (error !== false) {
@@ -18,21 +22,12 @@ function ReposList({ loading, error, repos, strings}) {
     return <List component={ErrorComponent} />;
   }
 
-  if (repos !== false) {
-    return <List items={repos} component={RepoListItem} />;
-  }
-
-  if (strings !== false) {
-    return <List items={strings} component={RepoListItem} />;
-  }
-
   return null;
 }
 
 ReposList.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.any,
-  repos: PropTypes.any,
   strings: PropTypes.any,
 };
 

@@ -54,14 +54,12 @@ const appReducer = (state = initialState, action) =>
         break;
 
       case LOAD_STRINGS:
-        console.log("i am here at load_string reducer")
         draft.loading_strings = true;
         draft.error_strings = false;
         draft.stringsData.array = false;
         break;
 
       case LOAD_STRINGS_SUCCESS:
-        console.log("I am her at load success reducer")
         draft.stringsData.array = action.strings;
         draft.loading_strings = false;
         break;

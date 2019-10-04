@@ -8,6 +8,7 @@ import { initialState } from './reducer';
 const selectGlobal = state => state.global || initialState;
 
 const selectRouter = state => state.router;
+console.log(selectGlobal)
 
 const makeSelectCurrentUser = () =>
   createSelector(

@@ -9,11 +9,11 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const LOAD_REPOS = 'boilerplate/App/LOAD_REPOS';
-export const LOAD_REPOS_SUCCESS = 'boilerplate/App/LOAD_REPOS_SUCCESS';
-export const LOAD_REPOS_ERROR = 'boilerplate/App/LOAD_REPOS_ERROR';
+export const ADD_STRING = 'boilerplate/App/ADD_STRING';
+export const ADD_STRING_SUCCESS = 'boilerplate/App/ADD_STRING_SUCCESS';
+export const ADD_STRING_ERROR = 'boilerplate/App/ADD_STRING_ERROR';
 
 /** String api test */
-export const LOAD_STRINGS = 'boilerplate/App/LOAD_STRINGS';
-export const LOAD_STRINGS_SUCCESS = 'boilerplate/App/LOAD_STRINGS_SUCCESS';
-export const LOAD_STRINGS_ERROR = 'boilerplate/App/LOAD_STRINGS_ERROR';
+export const LOAD_STRINGS = 'dmi/App/LOAD_STRINGS';
+export const LOAD_STRINGS_SUCCESS = 'dmi/App/LOAD_STRINGS_SUCCESS';
+export const LOAD_STRINGS_ERROR = 'dmi/App/LOAD_STRINGS_ERROR';
