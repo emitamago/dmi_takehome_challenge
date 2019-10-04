@@ -5,28 +5,23 @@
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.containers.HomePage';
+export const scope = 'dmi.containers.HomePage';
 
 export default defineMessages({
-  startProjectHeader: {
-    id: `${scope}.start_project.header`,
-    defaultMessage: 'Start your next react project in seconds',
+  stringsHeader: {
+    id: `${scope}.string.header`,
+    defaultMessage: 'Welcome to Our Strings Page',
   },
-  startProjectMessage: {
-    id: `${scope}.start_project.message`,
-    defaultMessage:
-      'A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices',
+  stringsMessage: {
+    id: `${scope}.strings.message`,
+    defaultMessage: 'Please enjoy our awesome collection of strings!',
   },
-  trymeHeader: {
-    id: `${scope}.tryme.header`,
-    defaultMessage: 'Try me!',
+  addStringHeader: {
+    id: `${scope}.addString.header`,
+    defaultMessage: 'Add your favorite string!',
   },
-  trymeMessage: {
-    id: `${scope}.tryme.message`,
-    defaultMessage: 'Show Github repositories by',
-  },
-  trymeAtPrefix: {
-    id: `${scope}.tryme.atPrefix`,
-    defaultMessage: '@',
+  addStringMessage: {
+    id: `${scope}.addString.message`,
+    defaultMessage: 'Please type your string  ',
   },
 });

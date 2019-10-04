@@ -77,26 +77,22 @@ export function HomePage({
       <div>
         <CenteredSection>
           <H2>
-            <FormattedMessage {...messages.startProjectHeader} />
+            <FormattedMessage {...messages.stringsHeader} />
           </H2>
           <p>
-            <FormattedMessage {...messages.startProjectMessage} />
+            <FormattedMessage {...messages.stringsMessage} />
           </p>
         </CenteredSection>
         <Section>
           <H2>
-            <FormattedMessage {...messages.trymeHeader} />
+            <FormattedMessage {...messages.addStringHeader} />
           </H2>
           <Form onSubmit={onSubmitForm}>
             <label htmlFor="username">
-              <FormattedMessage {...messages.trymeMessage} />
-              <AtPrefix>
-                <FormattedMessage {...messages.trymeAtPrefix} />
-              </AtPrefix>
+              <FormattedMessage {...messages.addStringMessage} />
               <Input
                 id="username"
                 type="text"
-                placeholder="mxstbr"
                 value={username}
                 onChange={onChangeUsername}
               />

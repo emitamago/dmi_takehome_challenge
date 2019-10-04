@@ -5,7 +5,7 @@
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.components.Header';
+export const scope = 'dmi.components.Header';
 
 export default defineMessages({
   strings: {
