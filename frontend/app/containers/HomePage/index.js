@@ -24,7 +24,6 @@ import {
 } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
-import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
@@ -63,16 +62,11 @@ export function HomePage({
     repos,
     strings,
   };
-  console.log(reposListProps)
 
   return (
     <article>
       <Helmet>
-        <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React.js Boilerplate application homepage"
-        />
+        <title>Strings</title>
       </Helmet>
       <div>
         <CenteredSection>
@@ -88,10 +82,10 @@ export function HomePage({
             <FormattedMessage {...messages.addStringHeader} />
           </H2>
           <Form onSubmit={onSubmitForm}>
-            <label htmlFor="username">
+            <label htmlFor="newString">
               <FormattedMessage {...messages.addStringMessage} />
               <Input
-                id="username"
+                id="newString"
                 type="text"
                 value={username}
                 onChange={onChangeUsername}
