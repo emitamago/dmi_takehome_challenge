@@ -7,6 +7,7 @@ import { push } from 'connected-react-router'
 import request from 'utils/request';
 
 import { stringAdded, stringAddedError } from 'containers/App/actions';
+import { clearUsername } from './actions'
 import { ADD_NEWSTRING } from './constrains';
 
 import { makeSelectNewString } from './selectors';
@@ -17,7 +18,6 @@ import { makeSelectNewString } from './selectors';
  */
 export function* addString() {
   // Select username from store4
-  console.log('I am called in add saga')
   
   const newString = yield select(makeSelectNewString());
   const requestURL = `http://localhost:3001/strings`;
@@ -32,6 +32,7 @@ export function* addString() {
       }),
     });
     yield put(stringAdded(updatedStrings));
+    yield put(clearUsername());
     yield put(push('/'));
   } catch (err) {
     yield put(stringAddedError(err));

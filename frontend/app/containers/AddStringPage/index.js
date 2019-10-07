@@ -19,7 +19,7 @@ import {
   makeSelectErrorAddStrings,
   makeSelectStrings,
 } from 'containers/App/selectors';
-import { addNewString, changeUsername  } from './actions';
+import { addNewString, changeUsername, clearUsername  } from './actions';
 import { makeSelectNewString } from './selectors'
 
 import { addStrings } from '../App/actions';
@@ -38,8 +38,7 @@ export function AddStringPage({onSubmitForm,
 
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
-  console.log(saga)
-  console.log(onSubmitForm)
+  
   return (
     <div>
       <Helmet>

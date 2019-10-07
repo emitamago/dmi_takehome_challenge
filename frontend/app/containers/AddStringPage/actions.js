@@ -1,4 +1,4 @@
-import { ADD_NEWSTRING, CHANGE_NEWSTRING } from './constrains';
+import { ADD_NEWSTRING, CHANGE_NEWSTRING, CLEAR_NEWSTRING } from './constrains';
 
 
 /**
@@ -9,10 +9,17 @@ import { ADD_NEWSTRING, CHANGE_NEWSTRING } from './constrains';
  * @return {object} An action object with a type of CHANGE_USERNAME
  */
 export function changeUsername(newString) {
-    console.log("I am here for change")
+  console.log("I have been called change action")
   return {
     type: CHANGE_NEWSTRING,
     newString,
+  };
+}
+
+export function clearUsername() {
+  console.log("I have been called clear action")
+return {
+  type: CLEAR_NEWSTRING,
   };
 }
 
@@ -25,9 +32,7 @@ export function changeUsername(newString) {
  * @return {object} An action object with a type of CHANGE_USERNAME
  */
 export function addNewString() {
-   
   return {
     type: ADD_NEWSTRING,
-    
   };
 }

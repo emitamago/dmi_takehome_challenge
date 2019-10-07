@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { ADD_NEWSTRING, CHANGE_NEWSTRING } from './constrains';
+import { CLEAR_NEWSTRING, CHANGE_NEWSTRING } from './constrains';
 
 export const initialState = {
   newString: '',
@@ -10,8 +10,12 @@ const addStringPageReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
       case CHANGE_NEWSTRING:
-        console.log("I called reducer1111", newString)
+        console.log("i am her at change reducer")
         draft.newString = action.newString;
+        break;
+      case CLEAR_NEWSTRING:
+        console.log("I am here at clear reducer")
+        draft.newString = '';
         break;
     }
   });
