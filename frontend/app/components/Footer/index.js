@@ -1,9 +1,12 @@
+/** Footer component */
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+/** Styled components */
 import A from 'components/A';
-import LocaleToggle from 'containers/LocaleToggle';
 import Wrapper from './Wrapper';
+
+/** Footer messages */
 import messages from './messages';
 
 function Footer() {

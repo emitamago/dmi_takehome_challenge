@@ -1,9 +1,5 @@
 /**
- *
- * App
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
+ * App container
  */
 
 import React from 'react';
@@ -12,7 +8,7 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import AddStringPage from 'containers/AddStringPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -40,7 +36,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/addString" component={FeaturePage} />
+        <Route path="/addString" component={AddStringPage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />

@@ -9,9 +9,9 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const ADD_STRING = 'boilerplate/App/ADD_STRING';
-export const ADD_STRING_SUCCESS = 'boilerplate/App/ADD_STRING_SUCCESS';
-export const ADD_STRING_ERROR = 'boilerplate/App/ADD_STRING_ERROR';
+export const ADD_STRING = 'dmi/App/ADD_STRING';
+export const ADD_STRING_SUCCESS = 'dmi/App/ADD_STRING_SUCCESS';
+export const ADD_STRING_ERROR = 'dmi/App/ADD_STRING_ERROR';
 
 /** String api test */
 export const LOAD_STRINGS = 'dmi/App/LOAD_STRINGS';

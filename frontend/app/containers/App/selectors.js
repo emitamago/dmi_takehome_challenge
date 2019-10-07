@@ -8,31 +8,6 @@ import { initialState } from './reducer';
 const selectGlobal = state => state.global || initialState;
 
 const selectRouter = state => state.router;
-console.log(selectGlobal)
-
-const makeSelectCurrentUser = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.currentUser,
-  );
-
-const makeSelectLoading = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.loading,
-  );
-
-const makeSelectError = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.error,
-  );
-
-const makeSelectRepos = () =>
-  createSelector(
-    selectGlobal,
-    globalState => globalState.userData.repositories,
-  );
 
 const makeSelectLocation = () =>
   createSelector(
@@ -40,17 +15,27 @@ const makeSelectLocation = () =>
     routerState => routerState.location,
   );
 
-/** String API test */
+const makeSelectAddStrings = () =>
+  createSelector(
+    selectGlobal,
+    globalState => globalState.addingString,
+  );
+const makeSelectErrorStrings = () =>
+  createSelector(
+    selectGlobal,
+    globalState => globalState.error_Strings,
+  );
+
 const makeSelectLoadingStrings = () =>
   createSelector(
     selectGlobal,
     globalState => globalState.loading_Strings,
   );
 
-const makeSelectErrorStrings = () =>
+const makeSelectErrorAddStrings = () =>
   createSelector(
     selectGlobal,
-    globalState => globalState.error_Strings,
+    globalState => globalState.error_add_string,
   );
 
 const makeSelectStrings = () =>
@@ -67,11 +52,9 @@ const makeSelectLocationStrings = () =>
 
 export {
   selectGlobal,
-  makeSelectCurrentUser,
-  makeSelectLoading,
-  makeSelectError,
-  makeSelectRepos,
   makeSelectLocation,
+  makeSelectAddStrings,
+  makeSelectErrorAddStrings,
   makeSelectLoadingStrings,
   makeSelectStrings,
   makeSelectErrorStrings,
