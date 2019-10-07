@@ -2,11 +2,13 @@
  * Gets the repositories of the user from Github
  */
 
-import { call, put, takeLatest, select, fetch} from 'redux-saga/effects';
-import { ADD_NEWSTRING } from './constrains';
-import { stringAdded, stringAddedError } from 'containers/App/actions';
-
+import { call, put, takeLatest, select } from 'redux-saga/effects';
+import { push } from 'connected-react-router'
 import request from 'utils/request';
+
+import { stringAdded, stringAddedError } from 'containers/App/actions';
+import { ADD_NEWSTRING } from './constrains';
+
 import { makeSelectNewString } from './selectors';
 
 
@@ -18,21 +20,19 @@ export function* addString() {
   console.log('I am called in add saga')
   
   const newString = yield select(makeSelectNewString());
-  console.log(newString)
   const requestURL = `http://localhost:3001/strings`;
-  const bodydata = {newString }
+ 
   try {
     // Call our request helper (see 'utils/request')
     const updatedStrings = yield call(request, requestURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          newString,
-        })
-      })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        newString,
+      }),
+    });
     yield put(stringAdded(updatedStrings));
+    yield put(push('/'));
   } catch (err) {
     yield put(stringAddedError(err));
   }
