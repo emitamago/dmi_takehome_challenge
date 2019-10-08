@@ -18,7 +18,8 @@ export default defineMessages({
   },
   addStringHeader: {
     id: `${scope}.addString.header`,
-    defaultMessage: 'Add your favorite string!',
+    defaultMessage:
+      'If you would like to add your own string. Go to Add string page!',
   },
   addStringMessage: {
     id: `${scope}.addString.message`,
