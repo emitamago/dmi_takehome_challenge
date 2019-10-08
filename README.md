@@ -11,6 +11,7 @@
 ### Note
 - Please make sure backend server is running in order to make this app work
 - Upon restarting backend server, state of array will be back to default
+- Tests were written on container/App
 
 #### Thank you so much!
 
