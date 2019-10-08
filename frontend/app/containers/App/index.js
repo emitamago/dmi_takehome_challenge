@@ -27,10 +27,7 @@ const AppWrapper = styled.div`
 export default function App() {
   return (
     <AppWrapper>
-      <Helmet
-        titleTemplate="%s - dmi project"
-        defaultTitle="DMI Project"
-      >
+      <Helmet titleTemplate="%s - dmi project" defaultTitle="DMI Project">
         <meta name="description" content="DMI project" />
       </Helmet>
       <Header />
