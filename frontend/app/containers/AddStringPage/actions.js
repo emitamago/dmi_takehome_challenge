@@ -1,28 +1,24 @@
-import { ADD_NEWSTRING, CHANGE_NEWSTRING, CLEAR_NEWSTRING } from './constrains';
-
+import { ADD_NEWSTRING, CHANGE_NEWSTRING, CLEAR_NEWSTRING } from './constants';
 
 /**
  * Changes the input field of the form
  *
- * @param  {string} username The new text of the input field
+ * @param  {string} newString The new text of the input field
  *
- * @return {object} An action object with a type of CHANGE_USERNAME
+ * @return {object} An action object with a type of CHANGE_NEWSTRING
  */
-export function changeUsername(newString) {
-  console.log("I have been called change action")
+export function changeNewString(newString) {
   return {
     type: CHANGE_NEWSTRING,
     newString,
   };
 }
 
-export function clearUsername() {
-  console.log("I have been called clear action")
-return {
-  type: CLEAR_NEWSTRING,
+export function clearNewString() {
+  return {
+    type: CLEAR_NEWSTRING,
   };
 }
-
 
 /**
  * Changes the input field of the form

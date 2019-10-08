@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { CLEAR_NEWSTRING, CHANGE_NEWSTRING } from './constrains';
+import { CLEAR_NEWSTRING, CHANGE_NEWSTRING } from './constants';
 
 export const initialState = {
   newString: '',

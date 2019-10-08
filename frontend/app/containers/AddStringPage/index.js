@@ -19,7 +19,7 @@ import {
   makeSelectErrorAddStrings,
   makeSelectStrings,
 } from 'containers/App/selectors';
-import { addNewString, changeUsername, clearUsername  } from './actions';
+import { addNewString, changeNewString } from './actions';
 import { makeSelectNewString } from './selectors'
 
 import { addStrings } from '../App/actions';
@@ -82,7 +82,7 @@ const mapStateToProps = createStructuredSelector({
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeNewString: evt => dispatch(changeUsername(evt.target.value)),
+    onChangeNewString: evt => dispatch(changeNewString(evt.target.value)),
     onSubmitForm: evt => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(addNewString());
