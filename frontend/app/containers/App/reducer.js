@@ -19,9 +19,6 @@ export const initialState = {
   loading_strings: false,
   error_add_string: false,
   error_strings: false,
-  userData: {
-    repositories: false,
-  },
   stringsData: {
     array: false,
   },
