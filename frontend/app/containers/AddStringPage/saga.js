@@ -7,7 +7,7 @@ import { push } from 'connected-react-router';
 import request from 'utils/request';
 
 import { stringAdded, stringAddedError } from 'containers/App/actions';
-import { clearNewString } from './actions'
+import { clearNewString } from './actions';
 import { ADD_NEWSTRING } from './constants';
 
 import { makeSelectNewString } from './selectors';
@@ -52,4 +52,3 @@ export default function* addNewStringToServer() {
   // It will be cancelled automatically on component unmount
   yield takeLatest(ADD_NEWSTRING, addString);
 }
-

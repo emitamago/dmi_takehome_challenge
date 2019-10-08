@@ -11,19 +11,13 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
-
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
-import {
-  makeSelectAddStrings,
-  makeSelectErrorAddStrings,
-  makeSelectStrings,
-} from 'containers/App/selectors';
-import { addNewString, changeNewString } from './actions';
-import { makeSelectNewString } from './selectors'
-
-import { addStrings } from '../App/actions';
 import H1 from 'components/H1';
+
+import { addNewString, changeNewString } from './actions';
+import { makeSelectNewString } from './selectors';
+
 import messages from './messages';
 import Form from './Form';
 import Input from './Input';
@@ -32,36 +26,29 @@ import saga from './saga';
 
 const key = 'addStringPage';
 
-export function AddStringPage({onSubmitForm, 
-  onChangeNewString,
-  newString}) {
-
+export function AddStringPage({ onSubmitForm, onChangeNewString, newString }) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
-  
   return (
     <div>
       <Helmet>
         <title>Add String Page</title>
-        <meta
-          name="description"
-          content="Add String"
-        />
+        <meta name="description" content="Add String" />
       </Helmet>
       <H1>
         <FormattedMessage {...messages.addStringHeader} />
       </H1>
       <Form onSubmit={onSubmitForm}>
-            <label htmlFor="newString">
-              <FormattedMessage {...messages.addStringMessage} />
-              <Input
-                id="newString"
-                type="text"
-                 value={newString}
-                onChange={onChangeNewString}
-              />
-            </label>
-          </Form>
+        <label htmlFor="newString">
+          <FormattedMessage {...messages.addStringMessage} />
+          <Input
+            id="newString"
+            type="text"
+            value={newString}
+            onChange={onChangeNewString}
+          />
+        </label>
+      </Form>
     </div>
   );
 }
@@ -71,13 +58,10 @@ AddStringPage.propTypes = {
   onChangeNewString: PropTypes.func,
   newString: PropTypes.string,
   onSubmitForm: PropTypes.func,
-  // onChangeUsername: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
   newString: makeSelectNewString(),
-  addStrings: makeSelectAddStrings(),
-  addStringError: makeSelectErrorAddStrings(),
 });
 
 export function mapDispatchToProps(dispatch) {
