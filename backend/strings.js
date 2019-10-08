@@ -16,7 +16,6 @@ router.get('/', async function (req, res, next) {
 // POST--- endpoint for adding a string
 router.post('/', async function (req, res, next) {
     try {
-        console.log(req.body)
         let updatedStrings = String.addString(req.body.newString);
         return res.json( { updatedStrings } );
     } catch (err) {

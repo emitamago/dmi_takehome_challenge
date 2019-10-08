@@ -9,15 +9,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ListItem from 'components/ListItem';
 
-export function RepoListItem(props) {
+export function StringListItem(props) {
   const { item } = props;
 
   // Render the content into a list item
   return <ListItem key={`repo-list-item-${item}`} item={item} />;
 }
 
-RepoListItem.propTypes = {
+StringListItem.propTypes = {
   item: PropTypes.string,
 };
 
-export default connect()(RepoListItem);
+export default connect()(StringListItem);

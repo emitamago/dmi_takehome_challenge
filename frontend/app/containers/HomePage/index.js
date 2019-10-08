@@ -20,7 +20,7 @@ import {
   makeSelectStrings,
 } from 'containers/App/selectors';
 import H2 from 'components/H2';
-import ReposList from 'components/ReposList';
+import StringsList from 'components/StringsList';
 import CenteredSection from './CenteredSection';
 
 import Section from './Section';
@@ -37,7 +37,6 @@ export function HomePage({
   errorStrings,
   loadStringFromApi,
 }) {
-
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
@@ -69,7 +68,7 @@ export function HomePage({
           <H2>
             <FormattedMessage {...messages.addStringHeader} />
           </H2>
-          <ReposList {...stringsListProps} />
+          <StringsList {...stringsListProps} />
         </Section>
       </div>
     </article>
